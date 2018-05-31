@@ -22,17 +22,17 @@ def get_frame():
 grabbed, frame = get_frame()
 
 # Specify the output encoding for the saved file
-fourcc = cv2.cv.CV_FOURCC(*'mp4v')
+#fourcc = cv2.cv.CV_FOURCC(*'mp4v')
 # Get the size of the frame from the camera
 (h, w) = frame.shape[:2]
 # Build a video writer that writes to a file name with the specified
 # output encoding, framerate, and size
-writer = cv2.VideoWriter('output.mp4', fourcc, 40.0, (w, h))
+#writer = cv2.VideoWriter('output.mp4', fourcc, 40.0, (w, h))
 
-while True:
-    # Continuously grab a frame and write it to the outputter
-    grabbed, frame = get_frame()
-    writer.write(frame)
+# while True:
+#     # Continuously grab a frame and write it to the outputter
+#     grabbed, frame = get_frame()
+#     writer.write(frame)
 
 # Ideally we would listen for a signal and clean up the
 # camera and writer here, but it seems to work without.

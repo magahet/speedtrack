@@ -1,0 +1,41 @@
+# The cutoff for threshold. A lower number means smaller changes between
+# the average and current scene are more readily detected.
+threshold_sensitivity: 30
+# Number of pixels in each direction to blur the difference between
+# average and current scene. This helps make small differences larger
+# and more detectable.
+# blur_size: 40
+blur_size: 200
+# The number of square pixels a blob must be before we consider it a
+# candidate for tracking.
+blob_size: 4000
+# The number of pixels wide a blob must be before we consider it a
+# candidate for tracking.
+blob_width: 600
+# The weighting to apply to "this" frame when averaging. A higher number
+# here means that the average scene will pick up changes more readily,
+# thus making the difference between average and current scenes smaller.
+# default_average_weight: 0.04
+default_average_weight: 0.02
+
+# The maximum distance a blob centroid is allowed to move in order to
+# consider it a match to a previous scene's blob.
+blob_lockon_distance_px: 80
+# The number of seconds a blob is allowed to sit around without having
+# any new blobs matching it.
+blob_track_timeout: 6
+
+# Bounding box (x, y, w, h) for the region on interest
+roi: [714, 90, 574, 54]
+
+# Real ROI width in feet
+real_distance: 30
+
+# Constants for drawing on the frame.
+line_thickness: 1
+circle_size: 5
+resize_ratio: 0.4
+
+# Video frame rate.
+# This is needed to determine velocity and set proper playback speed
+frame_rate: 12
